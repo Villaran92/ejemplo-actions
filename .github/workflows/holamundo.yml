@@ -1,6 +1,13 @@
 name: hola mundo
 
+# on:
+#   push:
+#     branches:
+#       - main
+
 on:
+  schedule:
+    - cron: '*/5 * * * *' # cada 5 minutos
   push:
     branches:
       - main
