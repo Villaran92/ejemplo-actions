@@ -19,3 +19,11 @@ jobs:
     steps: 
       - name: muestra mensaje 
         run: echo "hola mundo, soy Villaran"
+        
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: List repo files
+        run: |
+          echo: "El repo ${{github.repository}} contiene los siguientes archivos: "
+          tree
