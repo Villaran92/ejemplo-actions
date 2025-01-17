@@ -12,6 +12,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'codigo/**'
+      - './github/workflows/holamundo.yml'
       # - dev
   pull_request: 
     branches:
