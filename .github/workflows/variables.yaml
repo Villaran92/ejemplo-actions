@@ -16,7 +16,7 @@ jobs:
         steps:
             - name: Step 1 del Job 1
               run:  |
-                echo: "El valor de la variable global es $variable_global"
-                echo: "Otra forma es ${{ env.variable_global }}"
-                echo: $name1 y $name2 <3
+                echo "El valor de la variable global es $variable_global"
+                echo "Otra forma es ${{ env.variable_global }}"
+                echo $name1 y $name2 <3
             
