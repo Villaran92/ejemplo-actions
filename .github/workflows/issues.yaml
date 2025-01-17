@@ -2,7 +2,7 @@ name: Issues ejemplo
 
 on: 
   issues: 
-    types: 
+    types: # Tambien se puede usar [opened]
       - opened 
 jobs: 
   procesa-issue:
