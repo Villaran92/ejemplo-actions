@@ -18,5 +18,5 @@ jobs:
               run:  |
                 echo "El valor de la variable global es $variable_global"
                 echo "Otra forma es ${{ env.variable_global }}"
-                echo $name1 y $name2 <3
+                echo "Otra es $name1 y $name2 <3"
             
