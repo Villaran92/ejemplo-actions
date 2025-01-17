@@ -1,0 +1,14 @@
+name: Ejemplo matriz
+on:
+    workflow_dispatch
+jobs:
+    build:
+        strategy: 
+            fail-fast: false
+            matrix:
+                so: [windows-latest, ubuntu-latest]
+        name: matriz uni-dimensional
+        runs-on: ${{matrix.so}}
+        steps:
+            - name: imprimir SO
+              run: echo "Sistema operativo ${{matrix.so}}"
