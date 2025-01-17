@@ -1,4 +1,4 @@
-name: Expresiones
+name: Comandos error y warning
 on:
     workflow_dispatch
 jobs:
