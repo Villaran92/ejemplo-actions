@@ -19,4 +19,37 @@ jobs:
                 echo "El valor de la variable global es $variable_global"
                 echo "Otra forma es ${{ env.variable_global }}"
                 echo "Otra es $name1 y $name2 <3"
+                echo "${{env.variable-step}}"
+              env:
+                variable-step: VARIABLE STEP 1
+            - name: Step 2 del Job 1
+              run:  |
+                echo "El valor de la variable global es $variable_global"
+                echo "Otra forma es ${{ env.variable_global }}"
+                echo "Otra es $name1 y $name2 <3"
+                echo "${{env.variable-step}}"
+              env:
+                variable-step: VARIABLE STEP 2
+    job2:
+        runs-on: ubuntu-latest
+        env:
+            variable_job: VARIABLE JOB
+            name2: ALOYPERRITO
+        steps:
+            - name: Step 1 del Job 2
+              run:  |
+                echo "El valor de la variable global es $variable_global"
+                echo "Otra forma es ${{ env.variable_global }}"
+                echo "Otra es $name1 y $name2 <3"
+                echo "${{env.variable-step}}"
+              env:
+                variable-step: VARIABLE STEP 1
+            - name: Step 2 del Job 2
+              run:  |
+                echo "El valor de la variable global es $variable_global"
+                echo "Otra forma es ${{ env.variable_global }}"
+                echo "Otra es $name1 y $name2 <3"
+                echo "${{env.variable-step}}"
+              env:
+                variable-step: VARIABLE STEP 3
             
