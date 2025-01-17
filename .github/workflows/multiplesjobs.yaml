@@ -1,0 +1,21 @@
+name: multiples jobs
+
+on: 
+    workflow_dispatch
+
+jobs: 
+    job1:
+        runs-on: ubuntu.latest
+        steps:
+            - name: Imprime nombre job
+              run:  echo "Job1"
+    job2:
+        runs-on: macos-latest
+        steps:
+            - name: Imprime nombre job
+              run:  echo "Job2"                         
+    job3:
+        runs-on: windows-latest
+        steps:
+            - name: Imprime nombre job
+              run:  echo "Job3"          
