@@ -15,5 +15,5 @@ jobs:
         steps:
             - name: imprimir SO
               run: |
-                # echo "Sistema operativo ${{matrix.so}}"
+                echo "Sistema operativo ${{matrix.so}}"
                 echo "Nombre ${{matrix.name}}"
