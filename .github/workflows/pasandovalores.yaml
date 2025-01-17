@@ -16,7 +16,7 @@ jobs:
             - name: Enmascarando valor
               id: enmascarar
               run: |
-                valor_secreto: Maria
+                valor_secreto=Maria
                 echo "::add-mask::$valor_secreto"
                 echo "VALOR_SECRETO=$valor_secreto" >> "$GITHUB_OUTPUT"
 
