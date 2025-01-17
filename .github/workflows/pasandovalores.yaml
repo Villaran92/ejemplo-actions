@@ -1,0 +1,14 @@
+name: Pasando valores
+on:
+    workflow_dispatch
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Escribe variable
+              id: genera_valor
+              run: |
+                echo "MI_VALOR=aloy" >> "$GITHUB_OUTPUT"
+
+            - name: Obtener variable
+              run: echo "${{steps.genera_valor.outputs.MI_VALOR}}"
