@@ -7,8 +7,13 @@ jobs:
             fail-fast: false
             matrix:
                 so: [windows-latest, ubuntu-latest]
+                name:
+                    - Maria
+                    - Aloy
         name: matriz uni-dimensional
         runs-on: ${{matrix.so}}
         steps:
             - name: imprimir SO
-              run: echo "Sistema operativo ${{matrix.so}}"
+              run: |
+                echo "Sistema operativo ${{matrix.so}}"
+                echo "Nombre ${{matrix.name}}"
