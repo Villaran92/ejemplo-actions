@@ -18,4 +18,10 @@ jobs:
         runs-on: windows-latest
         steps:
             - name: Imprime nombre job
-              run:  echo "Job3"          
+              run:  echo "Job3"  
+    jobdependiente:
+        runs-on: ubuntu-latest
+        needs: [job1, job2]
+        steps:
+            - name: Imprime nombre job
+              run:  echo "Job dependiente"                   
