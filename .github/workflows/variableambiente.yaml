@@ -1,0 +1,17 @@
+name: variables de ambiente
+
+on: 
+    workflow_dispatch
+
+jobs: 
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: Configura variable de ambiente
+              run: echo "NODE_ENV=Aloy" >> $GITHUB_ENV
+
+            - name: Imprime variable de ambiente y ejecuta JS
+              run: node main.js
